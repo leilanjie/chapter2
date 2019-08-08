@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sampledb@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.8">
+    <root id="1">
+      <ServerVersion>5.0</ServerVersion>
+      <DefaultCasing>lower/lower</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="information_schema"/>
+    <schema id="3" parent="1" name="mysql"/>
+    <schema id="4" parent="1" name="sampledb">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="5" parent="1" name="test"/>
+    <table id="6" parent="4" name="t_login_log"/>
+    <table id="7" parent="4" name="t_user"/>
+    <column id="8" parent="6" name="login_log_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="9" parent="6" name="user_id">
+      <Position>2</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="10" parent="6" name="ip">
+      <Position>3</Position>
+      <DataType>VARCHAR(23)|12s</DataType>
+    </column>
+    <column id="11" parent="6" name="login_datetime">
+      <Position>4</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <key id="12" parent="6" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>login_log_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="13" parent="7" name="user_id">
+      <Position>1</Position>
+      <DataType>INT(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="14" parent="7" name="user_name">
+      <Position>2</Position>
+      <DataType>VARCHAR(30)|12s</DataType>
+    </column>
+    <column id="15" parent="7" name="credits">
+      <Position>3</Position>
+      <DataType>INT(10)|4s</DataType>
+    </column>
+    <column id="16" parent="7" name="password">
+      <Position>4</Position>
+      <DataType>VARCHAR(32)|12s</DataType>
+    </column>
+    <column id="17" parent="7" name="last_visit">
+      <Position>5</Position>
+      <DataType>DATE(10)|91s</DataType>
+    </column>
+    <column id="18" parent="7" name="last_ip">
+      <Position>6</Position>
+      <DataType>VARCHAR(23)|12s</DataType>
+    </column>
+    <key id="19" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
