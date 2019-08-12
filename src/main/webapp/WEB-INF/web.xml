@@ -8,11 +8,13 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:smart-context.xml</param-value>
         </context-param>
+    <!-- ContextLoaderListener实现了ServletContextListener接口，只负责监听WEB容器启动和关闭-->
     <listener>
         <listener-class>
             org.springframework.web.context.ContextLoaderListener
         </listener-class>
     </listener>
+    <!-- RequestContextListener实现了ServletRequestListener接口，监听Http请求事件-->
     <listener>
         <listener-class>
             org.springframework.web.context.request.RequestContextListener

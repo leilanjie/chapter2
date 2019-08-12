@@ -11,11 +11,9 @@ public class LoginLogDao {
     private JdbcTemplate jdbcTemplate;
     private final static String INSERT_LOGIN_LOG_SQL = "INSERT INTO t_login_log(user_id,ip,login_datetime) VALUES(?,?,?)";
       public void insertLoginLog(LoginLog loginLog){
-          System.out.println(loginLog.getUserId()+loginLog.getIp()+loginLog.getLoginDate());
           Object[] args ={ loginLog.getUserId(),loginLog.getIp(),loginLog.getLoginDate()};
-          System.out.println("222222");
           jdbcTemplate.update(INSERT_LOGIN_LOG_SQL,args);
-          System.out.println("3333333");
+
       }
 @Autowired
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {

@@ -36,13 +36,10 @@ public class UserService {
     public void loginSuccess(User user){
        user.setCredits(5+user.getCredits());
         LoginLog loginLog=new LoginLog();
-        //loginLog.setLoginLogId(1);
         loginLog.setUserId(user.getUserId());
         loginLog.setIp(user.getLastIp());
-        //System.out.println(user.getLastVisit());
         loginLog.setLoginDate(user.getLastVisit());
         userDao.updateLoginInfo(user);
-        //System.out.println("111111");
         loginLogDao.insertLoginLog(loginLog);
     }
 }
