@@ -47,6 +47,7 @@ public class UserDao {
             user.getLastIp(),user.getCredits(),user.getUserId()});
   }
 
+
   public JdbcTemplate getJdbcTemplate() {
     return jdbcTemplate;
   }

@@ -8,6 +8,7 @@ public class User  implements Serializable {
     private int userId;
     private  String userName;
     private  String password;
+    private String realName;
     private  int credits;
     private String lastIp;
     private Date lastVisit;
@@ -58,5 +59,13 @@ public class User  implements Serializable {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
     }
 }

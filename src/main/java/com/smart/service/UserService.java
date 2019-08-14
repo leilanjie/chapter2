@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.security.PublicKey;
+
 /**
  *
  * @author  创建service
@@ -41,5 +43,9 @@ public class UserService {
         loginLog.setLoginDate(user.getLastVisit());
         userDao.updateLoginInfo(user);
         loginLogDao.insertLoginLog(loginLog);
+    }
+
+    public void createUser(User user) {
+        System.out.println("创建"+user+"成功");
     }
 }

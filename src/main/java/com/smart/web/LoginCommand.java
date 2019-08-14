@@ -1,5 +1,6 @@
 package com.smart.web;
 
+
 public class LoginCommand {
     private String userName;
     private String password;
